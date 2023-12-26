@@ -54,6 +54,7 @@ Header files for development with %{name}.
 
 %build
 %cmake \
+       -DBUILD_TESTING:BOOL=FALSE \
        -DBUILD_SONIVOX_STATIC:BOOL=FALSE
 
 %make_build
