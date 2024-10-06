@@ -13,6 +13,8 @@ Source:         https://github.com/pedrolcl/sonivox/archive/v%{version}/%{name}-
 
 BuildRequires:  cmake
 
+Requires:       %{libname} = %{version}-%{release}
+
 %description
 Sonivox is a fork of the Android Open Source Project 'platform_external_sonivox'
 including a CMake based build system to be used not on Android, but on any other
@@ -43,6 +45,7 @@ provide your own input/output.
 %package -n     %{develname}
 Summary:        Development package for %{name}
 Group:          Development/C++
+Requires:       %{name} = %{version}-%{release}
 Requires:       %{libname} = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
 
@@ -62,6 +65,9 @@ Header files for development with %{name}.
 %install
 %make_install -C build
 
+%files
+%{_bindir}/sonivoxrender
+
 %files -n %{libname}
 %license LICENSE
 %{_libdir}/lib%{name}.so.%{major}{,.*}
@@ -71,3 +77,4 @@ Header files for development with %{name}.
 %{_libdir}/lib%{name}.so
 %{_libdir}/cmake/%{name}/
 %{_libdir}/pkgconfig/%{name}.pc
+%{_mandir}/man1/sonivoxrender.1.*
