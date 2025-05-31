@@ -3,7 +3,7 @@
 %define develname %mklibname %{name} -d
 
 Name:           sonivox
-Version:        3.6.15
+Version:        3.6.16
 Release:        1
 Summary:        Fork of the AOSP 'platform_external_sonivox' project
 Group:          System/Libraries
