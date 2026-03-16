@@ -11,6 +11,7 @@ Group:	Sound
 Url:		https://github.com/pedrolcl/sonivox
 Source0:	https://github.com/pedrolcl/sonivox/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:		cmake >= 3.21
+BuildRequires:		make
 BuildRequires:		pkgconfig(zlib)
 Requires:       %{libname} = %{version}-%{release}
 
